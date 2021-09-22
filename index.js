@@ -4,7 +4,7 @@ var outputMessage = document.querySelector(".result");
 
 var flag = 1;
 
-btnCheck.addEventListener("click", function clickHandler(){
+btnCheck.addEventListener("click", function clickHandler() {
 
     console.log(String(userInputNum.value));
 
@@ -12,46 +12,36 @@ btnCheck.addEventListener("click", function clickHandler(){
     flag = 1;
 });
 
-function isPrimeNum(inputNum)
-{
-	if(inputNum > 1)
-	{
-		for(var i = 2; i < inputNum; i++)
-		{
-			if(inputNum % i == 0)
-			{
-				flag = 2;
-			}
-		}
-	}
-	else if(inputNum === 1 || inputNum == '0')
-	{
+function isPrimeNum(inputNum) {
+    if (inputNum > 1) {
+        for (var i = 2; i < inputNum; i++) {
+            if (inputNum % i == 0) {
+                flag = 2;
+            }
+        }
+    } else if (inputNum === 1 || inputNum == '0') {
         flag = 3;
-	}
-	else if(inputNum == "" || inputNum < 0){
-		flag = 0;
-	}
+    } else if (inputNum == "" || inputNum < 0) {
+        flag = 0;
+    }
     return flag;
 }
 
 
-function outputResult(result)
-{
-	switch(result)
-    {
-        case 1:{
-            return (userInputNum.value + " is prime number"); 
+function outputResult(result) {
+    switch (result) {
+        case 1: {
+            return (userInputNum.value + " is prime number");
         };
-        case 2:{
-            return (userInputNum.value + " is not a prime number");
-        };
-        case 3:{
-            return (userInputNum.value + " is neither prime nor composite number");
-        };
-        default: {
-            return ("please enter a valid input");
-        }
+    case 2: {
+        return (userInputNum.value + " is not a prime number");
+    };
+    case 3: {
+        return (userInputNum.value + " is neither prime nor composite number");
+    };
+    default: {
+        return ("please enter a valid input");
+    }
 
     }
 }
-
