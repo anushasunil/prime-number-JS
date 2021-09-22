@@ -1,8 +1,13 @@
-var userInputYear = document.querySelector("#userInputYear");
+var userInputNum = document.querySelector("#userInputNum");
 var btnCheck = document.querySelector(".check");
 var outputMessage = document.querySelector(".result");
 
-var isPrime = true;
+var flag = 1;
+
+btnCheck.addEventListener("click", function clickHandler(){
+
+    outputMessage.innerText = outputResult(isPrimeNum(userInputNum.value));
+});
 
 function isPrimeNum(inputNum)
 {
@@ -12,18 +17,38 @@ function isPrimeNum(inputNum)
 		{
 			if(inputNum % i == 0)
 			{
-				isPrime = false;
-				break;
+				flag = 2;
 			}
 		}
-
-		outputResult(isPrime);
 	}
 	else if(inputNum == 1 || inputNum == 0)
 	{
-		console.log("neither prime nor composite");
+        flag = 3;
 	}
 	else {
-		console.log("enter a valid input");
+		flag = 0;
 	}
+    return flag;
 }
+
+
+function outputResult(result)
+{
+	switch(result)
+    {
+        case 1:{
+            return (userInputNum.value + " is prime number"); 
+        };
+        case 2:{
+            return (userInputNum.value + " is not a prime number");
+        };
+        case 3:{
+            return (userInputNum.value + " is neither prime nor composite number");
+        };
+        default: {
+            return ("please enter a valid input");
+        }
+
+    }
+}
+
