@@ -1,0 +1,24 @@
+
+body {
+    text-align: center;
+    max-width: 1000px;
+    max-height: 1000px;
+    font-family: 'Racing Sans One', cursive;
+    margin: auto;
+  
+  }
+  
+  h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+  }
+  
+  .container {
+      margin: auto;
+      margin-top: 15rem;
+      max-width: 620px;
+      border: 7px double;
+      border-radius: 9rem 9rem 9rem 9rem;
+      /* background: radial-gradient(circle at 45% 45%,#FFFBEB 1%,#FEF3C7 10%,#FDE68A 30%,#FCD34D 40%,#FBBF24 50%,#F59E0B 60%,#D97706 70%,#B45309 80%,#92400E 90%,#78350F 100%); */
+        
+  }
