@@ -4,7 +4,6 @@
 body {
 text-align: center;
 max-width: 1000px;
-max-height: 1000px;
 font-family: 'Josefin Sans', sans-serif;
 margin: auto;
 
@@ -60,4 +59,50 @@ input {
     font-size: 2rem;
     margin-bottom: 1rem;
     font-weight: bold;
+}
+footer {
+    font-size: 1.5rem;
+    background-color: var(--primary-color);
+    /* padding: 2rem 1rem; */
+    text-align: center;
+    color: black;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    margin-top: 30%;
+
+}
+
+footer .link {
+    color: black;
+}
+
+footer ul {
+    padding-inline-start: 0px;
+
+}
+
+footer .footer-header {
+    font-weight: bold;
+}
+
+footer .link:hover {
+    color: black;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+.link {
+    max-width: min-content;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    
+}
+
+.list-non-bullet {
+    list-style: none;
+}
+
+.list-item-inline {
+    display: inline;
 }
