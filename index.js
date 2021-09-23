@@ -6,7 +6,8 @@ var flag = 1;
 
 btnCheck.addEventListener("click", function clickHandler() {
 
-    console.log(String(userInputNum.value));
+    console.log( typeof userInputNum.value);
+    console.log(Number (userInputNum.value));
 
     outputMessage.innerText = outputResult(isPrimeNum(userInputNum.value));
     flag = 1;
@@ -15,13 +16,13 @@ btnCheck.addEventListener("click", function clickHandler() {
 function isPrimeNum(inputNum) {
     if (inputNum > 1) {
         for (var i = 2; i < inputNum; i++) {
-            if (inputNum % i == 0) {
+            if (inputNum % i === 0) {
                 flag = 2;
             }
         }
-    } else if (inputNum === 1 || inputNum == '0') {
+    } else if (inputNum === "1" || inputNum === "0") {
         flag = 3;
-    } else if (inputNum == "" || inputNum < 0) {
+    } else {
         flag = 0;
     }
     return flag;
